@@ -1,0 +1,25 @@
+<div class="header-container">
+    <div class="logo-container">
+        <button mat-icon-button status="success" size="tiny" (click)="toggle()">
+            <nb-icon icon="menu-2-outline"></nb-icon>
+        </button>
+        <a class="logo" href="#"><img src="assets/img/logo.png" height="40px" /></a>
+    </div>
+</div>
+<div class="text-center">
+    <h3>HRMS</h3>
+</div>
+<div class="header-container">
+    <nb-actions size="small">
+        <nb-action *ngFor="let each of menu" class="control-item" title="{{each.title}}" [link]="each.link"
+            [icon]="each.icon">
+
+        </nb-action>
+        <!-- <nb-badge text="99+" status="danger" position="top left"></nb-badge> -->
+        <nb-action class="user-action">
+            <nb-action [nbContextMenu]="items" class="control-item" icon="person-done-outline"> </nb-action>
+            <!-- <span class="clr-fff">{{user?.StudentFullName}}</span> -->
+            <!-- <a class="sidebar-toggle logo" [nbContextMenu]="items">User</a> -->
+        </nb-action>
+    </nb-actions>
+</div>

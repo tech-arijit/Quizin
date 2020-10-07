@@ -1,0 +1,47 @@
+<section class="w3l-login">
+    <div class="overlay">
+        <div class="wrapper">
+            <div class="logo">
+                <a class="brand-logo" href="index.html">ICML</a>
+            </div>
+            <div class="form-section">
+                <h3>Login</h3>
+                <h6>To continue with Us</h6>
+                <form [formGroup]="angForm" novalidate>
+                    <div class="form-input">
+                        <input type="text" placeholder="Username" formControlName="username" required />
+                    </div>
+                    <div *ngIf="angForm.controls['username'].invalid && (angForm.controls['username'].dirty || angForm.controls['username'].touched)" class="alert alert-danger">
+                        <div *ngIf="angForm.controls['username'].errors.required" class="text-danger">
+                          Name is required.
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <div class="form-input">
+                        <input type="password" placeholder="Password" formControlName="currentPassword" required>
+                    </div>
+                    <div *ngIf="angForm.controls['currentPassword'].invalid && (angForm.controls['currentPassword'].dirty || angForm.controls['currentPassword'].touched)" class="alert alert-danger">
+                        <div *ngIf="angForm.controls['currentPassword'].errors.required" class="text-danger">
+                          Password is required.
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary theme-button mt-4" [disabled]="angForm.pristine || angForm.invalid">Log in</button>
+                    <!--  [routerLink]="['/pages']" [disabled]="heroForm.invalid"
+                    <div class="new-signup">
+                        <a href="#reload" class="signuplink">Forgot username or password?</a>
+                    </div> -->
+                </form>
+                <!-- <p class="signup">Don’t have account yet? <a href="#signup.html" class="signuplink">Sign Up</a></p> -->
+            </div>
+        </div>
+    </div>
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+
+    <!-- copyright -->
+    <div class="copy-right">
+        <p>All rights reserved | Design by <a href="#" target="_blank">Arijit & Ajit</a></p>
+    </div>
+    <!-- //copyright -->
+</section>

@@ -1,0 +1,79 @@
+<nb-layout center>
+  <nb-layout-header>Awesome Company</nb-layout-header>
+
+  <nb-layout-column>
+    <!-- <nb-reveal-card>
+      <nb-card-front>
+        <nb-card status="primary">
+          <nb-card-header center>Sign Up</nb-card-header>
+          <nb-card-body class="example-items-rows">
+            <div class="from-group">
+              <div class="row">
+                <div class="col-md-6"><input type="text" nbInput fullWidth placeholder="Text field"></div>
+                <div class="col-md-6"><input type="text" nbInput fullWidth placeholder="Text field"></div>
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </nb-card-front>
+      <nb-card-back>
+        <nb-card accent="primary">
+          <nb-card-header>Back Card Header</nb-card-header>
+          <nb-card-body>
+            A nebula is an interstellar cloud of dust, hydrogen,
+            helium and other ionized gases.
+            Originally, nebula was a name for
+            any diffuse astronomical object,
+            including galaxies beyond the Milky Way.
+          </nb-card-body>
+        </nb-card>
+      </nb-card-back>
+    </nb-reveal-card> -->
+
+    <nb-card>
+      <nb-card-body>
+        <nb-stepper orientation="horizontal">
+          <nb-step [label]="labelOne">
+            <ng-template #labelOne>First step</ng-template>
+            <h4>Sign Up</h4>
+            <div class="from-group">
+              <div class="row">
+                <div class="col-md-6"><input type="text" nbInput fullWidth placeholder="Text field"></div>
+                <div class="col-md-6"><input type="text" nbInput fullWidth placeholder="Text field"></div>
+              </div>
+            </div>
+            <br />
+            <div>
+              <button nbButton disabled nbStepperNext>prev</button>
+              <button nbButton nbStepperNext>next</button>
+            </div>
+          </nb-step>
+          <nb-step [label]="labelTwo">
+            <ng-template #labelTwo>Second step</ng-template>
+            <h4>Please Verify with E-mail OTP</h4>
+            <p class="lorem">
+              Lorizzle ipsum dolizzle stuff fizzle, consectetuer adipiscing break it down.
+              Nullizzle sapien velizzle, my shizz pimpin', shizzle my nizzle crocodizzle shut the shizzle up,
+              gravida vizzle, dang.
+            </p>
+            <button nbButton nbStepperPrevious>prev</button>
+            <button nbButton nbStepperNext>next</button>
+          </nb-step>
+          <nb-step [label]="labelThree">
+            <ng-template #labelThree>Final Step</ng-template>
+            <h4 class="text-success">Success</h4>
+            <p class="lorem">
+              Lorizzle ipsum dolizzle stuff fizzle, consectetuer adipiscing break it down.
+              Nullizzle sapien velizzle, my shizz pimpin', shizzle my nizzle crocodizzle shut the shizzle up,
+              gravida vizzle, dang.
+            </p>
+            <button nbButton nbStepperPrevious>prev</button>
+            <button nbButton disabled nbStepperNext>next</button>
+          </nb-step>
+        </nb-stepper>
+      </nb-card-body>
+    </nb-card>
+  </nb-layout-column>
+
+  <nb-layout-footer>Contact us</nb-layout-footer>
+</nb-layout>
